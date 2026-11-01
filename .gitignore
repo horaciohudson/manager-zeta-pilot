@@ -1,0 +1,19 @@
+# Local secrets
+.env
+.env.docker
+.env.*
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Builds and dependencies
+Backend/target/
+Frontend/node_modules/
+Frontend/dist/
+Frontend/*.tsbuildinfo

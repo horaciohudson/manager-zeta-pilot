@@ -1,0 +1,15 @@
+CREATE TABLE tab_smtp_settings (
+    id SMALLINT PRIMARY KEY CHECK (id = 1),
+    enabled BOOLEAN NOT NULL DEFAULT FALSE,
+    host VARCHAR(255) NOT NULL DEFAULT '',
+    port INTEGER NOT NULL DEFAULT 587 CHECK (port BETWEEN 1 AND 65535),
+    username VARCHAR(255) NOT NULL DEFAULT '',
+    password_encrypted TEXT NOT NULL DEFAULT '',
+    auth BOOLEAN NOT NULL DEFAULT TRUE,
+    starttls_enabled BOOLEAN NOT NULL DEFAULT TRUE,
+    ssl_enabled BOOLEAN NOT NULL DEFAULT FALSE,
+    from_address VARCHAR(255) NOT NULL DEFAULT '',
+    from_name VARCHAR(150) NOT NULL DEFAULT 'ZetaPilotAI'
+);
+
+INSERT INTO tab_smtp_settings (id) VALUES (1);
